@@ -1,0 +1,135 @@
+📁 Final Project/
+├── 📄 README.md                           # Project overview và setup instructions
+├── 📄 PROJECT_PROPOSAL.md                 # ✅ Đã có - Comprehensive project proposal  
+├── 📄 PROJECT_IMPLEMENTATION_STAGES.md    # ✅ Đã có - 16-week roadmap
+├── 📄 SETUP_INSTRUCTIONS.md              # ✅ Đã có - Development environment setup
+├── 📄 requirements.txt                    # Python dependencies
+├── 📄 .gitignore                         # Git ignore file
+│
+├── 📁 data/                              # ✅ Đã có - Data directory
+│   ├── 📁 raw/                           # Raw datasets (optional backup)
+│   └── 📁 processed/                     # ✅ Đã có - Processed datasets
+│       ├── train_data.csv               # ✅ Training set
+│       ├── val_data.csv                 # ✅ Validation set  
+│       ├── test_data.csv                # ✅ Test set
+│       ├── user_features.csv            # ✅ User profile features
+│       ├── movie_features.csv           # ✅ Movie content features
+│       └── user_genre_preferences.csv   # ✅ User genre preferences
+│
+├── 📁 movie/                             # ✅ Đã có - MovieLens dataset
+│   └── 📁 ml-latest-small/              # ✅ Original MovieLens data
+│       ├── links.csv                    # ✅ Movie links
+│       ├── movies.csv                   # ✅ Movie metadata
+│       ├── ratings.csv                  # ✅ User ratings
+│       ├── tags.csv                     # ✅ Movie tags
+│       └── README.txt                   # ✅ Dataset documentation
+│
+├── 📁 notebooks/                         # 🚧 Jupyter notebooks cho analysis
+│   ├── EDA.ipynb                        # ✅ Đã có - Exploratory Data Analysis
+│   ├── baseline_models.ipynb            # ✅ Đã có - Week 4 baseline models
+│   ├── collaborative_filtering.ipynb    # 📅 Week 5 - CF models
+│   ├── matrix_factorization.ipynb       # 📅 Week 6 - SVD, NMF models
+│   ├── content_based.ipynb              # 📅 Week 7 - Content-based filtering
+│   ├── deep_learning.ipynb              # 📅 Week 8-9 - Neural CF, Autoencoders
+│   └── model_comparison.ipynb           # 📅 Week 10 - Final model selection
+│
+├── 📁 src/                               # 📅 Main source code (Stage 2-3)
+│   ├── 📁 models/                        # ML model implementations
+│   │   ├── __init__.py
+│   │   ├── base_recommender.py          # Base recommender class
+│   │   ├── collaborative_filtering.py   # CF implementations
+│   │   ├── matrix_factorization.py      # SVD, NMF implementations
+│   │   ├── content_based.py             # Content-based filtering
+│   │   ├── deep_learning.py             # Neural network models
+│   │   └── hybrid_models.py             # Hybrid approaches
+│   │
+│   ├── 📁 utils/                         # Utility functions
+│   │   ├── __init__.py
+│   │   ├── data_loader.py               # Data loading utilities
+│   │   ├── preprocessor.py              # Data preprocessing
+│   │   ├── evaluator.py                 # Evaluation metrics
+│   │   └── feature_engineering.py       # Feature engineering tools
+│   │
+│   ├── 📁 api/                           # 📅 Week 11-12 - Backend API
+│   │   ├── __init__.py
+│   │   ├── main.py                      # FastAPI main application
+│   │   ├── models.py                    # Pydantic models
+│   │   ├── routes/                      # API endpoints
+│   │   │   ├── __init__.py
+│   │   │   ├── auth.py                  # Authentication endpoints
+│   │   │   ├── users.py                 # User management
+│   │   │   ├── movies.py                # Movie data endpoints
+│   │   │   └── recommendations.py       # Recommendation endpoints
+│   │   ├── database.py                  # Database connection
+│   │   └── dependencies.py              # FastAPI dependencies
+│   │
+│   └── 📁 config/                        # Configuration files
+│       ├── __init__.py
+│       ├── settings.py                  # Application settings
+│       └── database_config.py           # Database configuration
+│
+├── 📁 frontend/                          # 📅 Week 13-14 - React frontend
+│   ├── 📄 package.json                  # Frontend dependencies
+│   ├── 📁 public/                       # Static files
+│   ├── 📁 src/                          # React source code
+│   │   ├── 📁 components/               # React components
+│   │   │   ├── MovieCard.tsx
+│   │   │   ├── RecommendationList.tsx
+│   │   │   ├── UserProfile.tsx
+│   │   │   └── SearchBar.tsx
+│   │   ├── 📁 pages/                    # Page components
+│   │   │   ├── Home.tsx
+│   │   │   ├── Login.tsx
+│   │   │   ├── Dashboard.tsx
+│   │   │   └── Recommendations.tsx
+│   │   ├── 📁 services/                 # API service layer
+│   │   │   ├── api.ts
+│   │   │   ├── auth.ts
+│   │   │   └── recommendations.ts
+│   │   ├── 📁 utils/                    # Frontend utilities
+│   │   ├── App.tsx                      # Main App component
+│   │   └── index.tsx                    # Entry point
+│   └── 📁 build/                        # Build output (generated)
+│
+├── 📁 tests/                             # 📅 Week 15 - Test suite
+│   ├── 📁 unit/                         # Unit tests
+│   │   ├── test_models.py
+│   │   ├── test_utils.py
+│   │   └── test_api.py
+│   ├── 📁 integration/                   # Integration tests
+│   │   ├── test_model_pipeline.py
+│   │   └── test_api_integration.py
+│   └── 📁 e2e/                          # End-to-end tests
+│       └── test_user_workflows.py
+│
+├── 📁 models/                            # 📅 Trained model artifacts
+│   ├── baseline_models.pkl              # Saved baseline models
+│   ├── collaborative_filtering.pkl      # Saved CF models
+│   ├── matrix_factorization.pkl         # Saved factorization models
+│   ├── content_based.pkl               # Saved content-based models
+│   └── final_model.pkl                  # Best performing model
+│
+├── 📁 deployment/                        # 📅 Week 16 - Deployment files
+│   ├── 📄 Dockerfile                    # Docker configuration
+│   ├── 📄 docker-compose.yml            # Multi-container setup
+│   ├── 📁 kubernetes/                   # K8s deployment configs (optional)
+│   └── 📁 scripts/                      # Deployment scripts
+│       ├── deploy.sh
+│       └── setup_database.sql
+│
+├── 📁 docs/                              # 📅 Documentation
+│   ├── 📄 API_DOCUMENTATION.md          # API reference
+│   ├── 📄 MODEL_DOCUMENTATION.md        # Model explanations
+│   ├── 📄 USER_MANUAL.md               # User guide
+│   └── 📁 images/                       # Documentation images
+│
+├── 📁 logs/                              # 📅 Application logs
+│   ├── app.log
+│   ├── model_training.log
+│   └── error.log
+│
+└── 📁 scripts/                           # 📅 Utility scripts
+    ├── setup_environment.py             # Environment setup
+    ├── train_models.py                  # Model training script
+    ├── evaluate_models.py               # Model evaluation script
+    └── data_migration.py                # Data migration tools
